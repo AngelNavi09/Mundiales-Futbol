@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganadores de los Mundiales de Fútbol</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        .mapa-conceptual {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Caja con content-box */
+        .caja-uruguay {
+            display: block;
+            width: 250px;
+            padding: 20px;
+            border: 5px solid blue;
+            box-sizing: content-box;
+            background-color: lightblue;
+            margin: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Caja con border-box */
+        .caja-brasil {
+            display: block;
+            width: 250px;
+            padding: 20px;
+            border: 5px solid green;
+            box-sizing: border-box;
+            background-color: lightgreen;
+            margin: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Caja inline-block */
+        .caja-alemania, .caja-argentina {
+            display: inline-block;
+            width: 200px;
+            padding: 15px;
+            border: 3px solid red;
+            box-sizing: border-box;
+            background-color: lightyellow;
+            margin: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .caja img {
+            width: 100px; /* Ajusta el tamaño según lo necesites */
+            height: auto;
+            display: block; /* Asegura que la imagen sea un bloque */
+            margin: 0 auto 10px; /* Centra la imagen y le da margen inferior */
+        }
+
+        .caja h2 {
+            color: darkgreen;
+            font-size: 18px;
+        }
+
+        .caja p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .explicacion {
+            font-size: 12px;
+            color: darkblue;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ganadores de los Mundiales de Fútbol</h1>
+
+    <div class="mapa-conceptual">
+
+        <!-- Caja para Uruguay -->
+        <div class="caja-uruguay caja">
+            <img src="uruguay.png" alt="Uruguay">
+            <h2>Uruguay (1930)</h2>
+            <p>Primer campeón del mundo, ganando la Copa Mundial inaugural en 1930.</p>
+            <div class="explicacion">
+                Ancho total = 250px (contenido) + 20px (padding izquierdo) + 20px (padding derecho) + 5px (borde izquierdo) + 5px (borde derecho) = <strong>300px</strong><br>
+                Usando <strong>content-box</strong>: el ancho se refiere solo al contenido, no incluye el padding ni el borde.
+            </div>
+        </div>
+
+        <!-- Caja para Brasil -->
+        <div class="caja-brasil caja">
+            <img src="brasil.png" alt="Brasil">
+            <h2>Brasil (1958, 1962, 1970, 1994, 2002)</h2>
+            <p>Brasil ha ganado la Copa del Mundo en cinco ocasiones.</p>
+            <div class="explicacion">
+                Ancho total = 250px (ancho total, incluye padding y borde) <br>
+                Usando <strong>border-box</strong>: el ancho incluye el contenido, padding y borde.
+            </div>
+        </div>
+
+        <!-- Caja para Alemania -->
+        <div class="caja-alemania caja">
+            <img src="alemania.png" alt="Alemania">
+            <h2>Alemania (1954, 1974, 1990, 2014)</h2>
+            <p>Alemania ha ganado cuatro títulos mundiales.</p>
+            <div class="explicacion">
+                Ancho total = 200px (ancho total) <br>
+                Usando <strong>inline-block</strong>: se comporta como un bloque, pero fluye en línea como un elemento inline.
+            </div>
+        </div>
+
+        <!-- Caja para Argentina -->
+        <div class="caja-argentina caja">
+            <img src="argentina.png" alt="Argentina">
+            <h2>Argentina (1978, 1986, 2022)</h2>
+            <p>Argentina tiene tres títulos mundiales, el más reciente en 2022.</p>
+            <div class="explicacion">
+                Ancho total = 200px (ancho total) <br>
+                Usando <strong>inline-block</strong>: igual que Alemania, el ancho incluye padding y borde.
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
